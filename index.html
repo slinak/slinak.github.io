@@ -3,6 +3,7 @@
 	function calculateMaxPrice() {
 		let marketPrice = Number(document.getElementById("marketPrice").value);
 		let adjustedPriceValue = (marketPrice * .078);
+		document.getElementById("maxPriceIncrease").value = adjustedPriceValue;
 		document.getElementById("maxPriceOutput").innerText = adjustedPriceValue + marketPrice;
 	}
 </script>
@@ -11,13 +12,21 @@
 		<tbody>
 			<tr>
 				<td>
-					<label for="marketPrice">Market Price: </label>
+					<label for="marketPrice">Market Price:</label>
 				</td>
 				<td>
 					<input id="marketPrice" type="text" onkeyup="calculateMaxPrice()"> </input>
 				</td>
 				<td>
 					<button id="calculatePrice" onclick="calculateMaxPrice()">Calculate</button>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="">Likely Max Increase:</label>
+				</td>
+				<td>
+					<input id="maxPriceIncrease" type="text" readonly></input>
 				</td>
 			</tr>
 			<tr>			
