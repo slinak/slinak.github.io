@@ -1,6 +1,6 @@
 <html>
 <script>
-	function calculateMaxWhitePrice() {
+	function calculateMaxPrice() {
 		let marketPrice = Number(document.getElementById("marketPrice").value);
 		let adjustedPriceValue = (marketPrice * .078);
 		document.getElementById("maxPriceOutput").innerText = adjustedPriceValue + marketPrice;
@@ -10,7 +10,7 @@
 <body>
 	<label for="marketPrice">Input Market Price: </label>
 	<input id="marketPrice" type="text"> </input>
-	<button onclick="calculateMaxWhitePrice()">Calculate</button>
+	<button onclick="calculateMaxPrice()">Calculate</button>
 	<br />
 	<label for="maxPriceOutput">Suggested Start Price: </label>
 	<p id="maxPriceOutput"> </p>
