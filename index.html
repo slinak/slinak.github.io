@@ -1,15 +1,19 @@
 <html>
 	<title>Teddy's Haven Price Calculator</title>
 	<style>
-		body {
-			margin: 0;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		.tableBody, .footer {
+			display: grid;
+			place-items: center;
 		}
 	</style>
 	<body>
+	<div class="tableBody">
+		<p>
+			The calculation is only two decimals but the actual percentage is 0.07899812378.
+		</p>
+		<p>
+			This means that for a small percentage of items you'll likely still have to adjust for max 'non-red' sale price.
+		</p>
 		<table>
 			<tbody>
 				<tr>
@@ -42,13 +46,20 @@
 			</tbody>
 		</table>
 		<p>
-			Like the game?  Give it a review to help the developer. 
-			<br />
+			Like the game?  Give it a review to help the developers.
+		</p>
+		<span>
 			<a href="https://store.steampowered.com/app/3615160/Teddys_Haven__A_Fantasy_Inspired_Shop_Simulator/" target="_blank">Steam Page</a>
-		</p>
-		<p>
-			<a href="https://github.com/slinak" target="_blank">My Github (I am not related to the game's developers)</a>
-		</p>
+		</span>
+		</div>
+		<br />
+		<br />
+		<br />
+		<div class="footer">
+			<p>
+				<a href="https://github.com/slinak/slinak.github.io" target="_blank">Github Repo (I am not related to the game's developers)</a>
+			</p>
+		</div>
 	</body>
 	<script>
 		const input = document.getElementById("marketPrice");
