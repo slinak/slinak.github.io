@@ -1,6 +1,19 @@
 <html>
 <title>Teddy's Haven Price Calculator</title>
 <script>
+	const input = document.getElementById("marketPrice");
+	const btn = document.getElementById("calculatePrice");
+
+	// Add a "keydown" listener to the input field
+	input.addEventListener("keydown", function(event) {
+	  // Check if the key pressed was "Enter"
+	  if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault();
+		// Trigger the button element with a click
+		btn.click();
+	  }
+	});
 	/*var submit = document.getElementById("calculator");
 	
 	submit.addEventListener("keydown", function(event) {
