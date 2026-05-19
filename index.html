@@ -1,5 +1,11 @@
 <html>
 <script>
+	document.getElementById("calculator").addEventListener("keydown", function(event) {
+		if (event.key == "Enter") {
+			event.preventDefault();
+			document.getElementById("calculatePrice").click();
+		}
+	});
 	function calculateMaxPrice() {
 		let marketPrice = Number(document.getElementById("marketPrice").value);
 		let adjustedPriceValue = (marketPrice * .078);
@@ -11,15 +17,17 @@
 	<table>
 		<tbody>
 			<tr>
+			<form id="calculator">
 				<td>
 					<label for="marketPrice">Market Price:</label>
 				</td>
 				<td>
-					<input id="marketPrice" type="text" onkeyup="calculateMaxPrice()"> </input>
+					<input id="marketPrice" type="text"> </input>
 				</td>
 				<td>
 					<button id="calculatePrice" onclick="calculateMaxPrice()">Calculate</button>
 				</td>
+				</form>
 			</tr>
 			<tr>
 				<td>
