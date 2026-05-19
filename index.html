@@ -1,8 +1,7 @@
 <html>
-<title>Teddy's Haven Price Calculator</title>
+	<title>Teddy's Haven Price Calculator</title>
 
-<body>
-	<form id="calculator">
+	<body>
 		<table>
 			<tbody>
 				<tr>
@@ -34,38 +33,37 @@
 				</tr>
 			</tbody>
 		</table>
-	</form>
-	<p>
-		Like the game?  Give it a review to help the developer. <a href="https://store.steampowered.com/app/3615160/Teddys_Haven__A_Fantasy_Inspired_Shop_Simulator/">Steam Page</a>
-	</p>
-</body>
-<script>
-	const input = document.getElementById("marketPrice");
-	const btn = document.getElementById("calculatePrice");
+		<p>
+			Like the game?  Give it a review to help the developer. <a href="https://store.steampowered.com/app/3615160/Teddys_Haven__A_Fantasy_Inspired_Shop_Simulator/">Steam Page</a>
+		</p>
+	</body>
+	<script>
+		const input = document.getElementById("marketPrice");
+		const btn = document.getElementById("calculatePrice");
 
-	// Add a "keydown" listener to the input field
-	input.addEventListener("keydown", function(event) {
-	  // Check if the key pressed was "Enter"
-	  if (event.key === "Enter") {
-		// Cancel the default action, if needed
-		event.preventDefault();
-		// Trigger the button element with a click
-		btn.click();
-	  }
-	});
-	/*var submit = document.getElementById("calculator");
-	
-	submit.addEventListener("keydown", function(event) {
-		if (event.key == "Enter") {
+		// Add a "keydown" listener to the input field
+		input.addEventListener("keydown", function(event) {
+		  // Check if the key pressed was "Enter"
+		  if (event.key === "Enter") {
+			// Cancel the default action, if needed
 			event.preventDefault();
-			document.getElementById("calculatePrice").click();
+			// Trigger the button element with a click
+			btn.click();
+		  }
+		});
+		/*var submit = document.getElementById("calculator");
+		
+		submit.addEventListener("keydown", function(event) {
+			if (event.key == "Enter") {
+				event.preventDefault();
+				document.getElementById("calculatePrice").click();
+			}
+		});*/
+		function calculateMaxPrice() {
+			let marketPrice = Number(document.getElementById("marketPrice").value);
+			let adjustedPriceValue = (marketPrice * .078);
+			document.getElementById("maxPriceIncrease").value = adjustedPriceValue;
+			document.getElementById("maxPriceOutput").innerText = adjustedPriceValue + marketPrice;
 		}
-	});*/
-	function calculateMaxPrice() {
-		let marketPrice = Number(document.getElementById("marketPrice").value);
-		let adjustedPriceValue = (marketPrice * .078);
-		document.getElementById("maxPriceIncrease").value = adjustedPriceValue;
-		document.getElementById("maxPriceOutput").innerText = adjustedPriceValue + marketPrice;
-	}
-</script>
+	</script>
 </html>
